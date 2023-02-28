@@ -1,0 +1,35 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    padding-right: calc(var(--bs-gutter-x) * 3);
+    padding-left: calc(var(--bs-gutter-x) * 3);
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 24px;
+
+    select {
+        width: 200px;
+        margin-right: 10px;
+        border: 1px solid rgb(181, 181, 181);
+        border-radius: 5px;
+        padding-left: 5px;
+        outline: none;
+    }
+
+    input {
+        border: 1px solid rgb(181, 181, 181);
+        width: 100%;
+        z-index: 1;
+        padding: 0 8px;
+        outline: none;
+    }
+    button {
+        background: var(--GN500, #00aa5b);
+        color: white;
+        border: none;
+        width: 100px;
+        cursor: pointer;
+    }
+}

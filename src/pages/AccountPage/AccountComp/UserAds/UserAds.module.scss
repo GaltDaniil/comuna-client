@@ -1,0 +1,37 @@
+.container {
+    .filters {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        margin: 14px 0;
+
+        .filterTitle {
+            margin-right: 16px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .activeFilter {
+            border: 1px solid var(--GN400, #20ce7d);
+            background-color: var(--GN50, #ecfef4);
+            color: var(--GN500, #00aa5b);
+            font-size: 14px;
+            border-radius: 10px;
+            padding: 8px;
+            margin-right: 10px;
+
+            cursor: default;
+        }
+
+        .filter {
+            border: 1px solid rgb(198, 198, 198);
+            font-size: 14px;
+            border-radius: 10px;
+            padding: 8px;
+            margin-right: 10px;
+
+            cursor: pointer;
+        }
+    }
+}

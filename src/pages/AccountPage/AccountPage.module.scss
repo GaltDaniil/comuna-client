@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    color: var(--NN700, #525867);
+    background-color: var(--NN0, #ffffff);
+    border: 1px solid var(--NN100, #e4ebf5);
+    width: 100%;
+    border-radius: 8px;
+
+    .tabHolder {
+        position: relative;
+        box-sizing: border-box;
+
+        .tabItems {
+            background-color: var(--color-page-background, #ffffff);
+            border-bottom: 1px solid var(--NN300, #bfc9d9);
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 44px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            white-space: nowrap;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+
+            .activeTab {
+                border-bottom: 2px solid rgb(0, 207, 38);
+                color: rgb(0, 207, 38);
+            }
+            .deactiveTab {
+                color: rgb(205, 205, 205);
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+
+                font-weight: 600;
+                font-family: Open Sauce One, 'Nunito Sans', -apple-system, sans-serif;
+                font-size: 14px;
+                color: var(--NN600, #6d7588);
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                width: 100%;
+                white-space: nowrap;
+
+                letter-spacing: 0px;
+
+                min-height: 44px;
+                padding: 10px 24px;
+                line-height: 24px;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                height: 100%;
+                pointer-events: auto;
+                transition: color 300ms cubic-bezier(0.63, 0.01, 0.29, 1);
+
+                /* p {
+                    display: block;
+                    position: relative;
+                    font-weight: 600;
+                    font-family: Open Sauce One, 'Nunito Sans', -apple-system, sans-serif;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0px;
+                    color: var(--NN600, #6d7588);
+                    text-decoration: initial;
+                    display: inline-block;
+                    margin: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    vertical-align: middle;
+                    width: 100%;
+                    white-space: nowrap;
+                } */
+            }
+        }
+        .underLine {
+            min-width: 16px;
+            width: 135px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: var(--GN500, #00aa5b);
+            position: absolute;
+            bottom: 0px;
+            left: 160px;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.63, 0.01, 0.29, 1);
+        }
+    }
+}

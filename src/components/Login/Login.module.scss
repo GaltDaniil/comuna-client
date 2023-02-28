@@ -1,0 +1,112 @@
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 35px;
+        background: rgb(255, 255, 255);
+        border-radius: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .field {
+                width: 300px;
+                height: 35px;
+
+                margin-bottom: 20px;
+                margin-top: 10px;
+                border-radius: 7px;
+            }
+
+            /* input {
+                height: 40px;
+                width: 300px;
+                margin-bottom: 10px;
+                border: 1px solid rgb(233, 233, 233);
+                border-radius: 7px;
+                outline: none;
+                background-color: rgb(233, 233, 233);
+                padding: 0 10px;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    border: 1px solid rgb(45, 195, 45);
+                }
+                &:focus {
+                    border: 1px solid rgb(45, 195, 45);
+                }
+            } */
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .checkbox {
+                    margin: 0;
+                    margin-right: 7px;
+                    margin-left: 0px;
+                    width: 15px;
+                }
+            }
+            p {
+                font-size: 12px;
+            }
+            a {
+                position: relative;
+                font-size: 12px;
+                flex: 1;
+                right: 0;
+                text-align: right;
+            }
+        }
+        .btnEnter {
+            margin: 10px 0;
+            width: 150px;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            background-color: rgb(34, 160, 34);
+            color: white;
+        }
+    }
+    p {
+        font-size: 12px;
+    }
+    .btnReg {
+        width: 200px;
+        height: 35px;
+        border-radius: 7px;
+        border: 1px solid rgb(34, 160, 34);
+        background: none;
+        color: rgb(34, 160, 34);
+    }
+}
+.btnClose {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}
