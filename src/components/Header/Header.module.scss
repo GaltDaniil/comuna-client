@@ -1,0 +1,54 @@
+.container {
+    padding: 0px 15px;
+    position: relative;
+
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    h2 {
+        font-size: 24px;
+        color: rgb(0, 207, 38);
+        text-decoration: none;
+    }
+    p {
+        flex: 1;
+        padding-left: 10px;
+        font-size: 14px;
+        color: rgb(105, 105, 105);
+    }
+    button {
+        margin-right: 7px;
+    }
+
+    .btns {
+        display: flex;
+
+        .btnEnter {
+            width: 180px;
+            height: 35px;
+            border: 2px solid #22aaff;
+            border-radius: 6px;
+            background: none;
+            color: #22aaff;
+        }
+
+        .btnNewAdd {
+            width: 200px;
+            height: 35px;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--GN500, #00aa5b);
+            color: white;
+        }
+        .btnLogout {
+            height: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 10px;
+            margin-left: 10px;
+            opacity: 0.4;
+        }
+    }
+}

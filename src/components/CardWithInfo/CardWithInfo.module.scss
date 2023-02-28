@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+}
+
+.cardContainer {
+    padding: 10px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 12px;
+    margin-right: 15px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px 0px;
+
+    .cardImgContainer {
+        position: relative;
+        left: 0;
+        width: 350px;
+        height: 200px;
+
+        .cardImage {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px 0 0 12px;
+        }
+    }
+
+    .cardInfo {
+        padding: 7px 7px;
+        * {
+            margin: 5px 0px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+            max-height: 40px;
+            overflow: hidden;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+    .cardBtns {
+        display: flex;
+        position: relative;
+        flex: 1;
+        padding: 0 7px;
+        margin-bottom: 10px;
+
+        p {
+            font-size: 12px;
+            flex: 1;
+            opacity: 0.5;
+        }
+        span {
+            font-size: 12px;
+            opacity: 0.5;
+        }
+        .cardView {
+            margin: 0 5px;
+            opacity: 0.5;
+        }
+        .cardLike {
+            margin: 0 5px;
+            opacity: 0.5;
+        }
+    }
+}

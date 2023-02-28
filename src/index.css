@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mainContainer {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@media (min-width: 1401px) {
+    .mainContainer {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .mainContainer {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .mainContainer {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .mainContainer {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .mainContainer {
+        max-width: 540px;
+    }
+}
