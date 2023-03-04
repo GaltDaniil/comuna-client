@@ -43,7 +43,7 @@ export const Header = () => {
                 <div className={styles.btns}>
                     <button className={styles.btnNewAdd}>+ выложить объявление</button>
                     <Link
-                        to={'user/setting'}
+                        to={'/user/setting'}
                         style={{
                             marginTop: 'auto',
                             marginBottom: 'auto',
@@ -70,7 +70,9 @@ export const Header = () => {
                         {' '}
                         вход и регистрация
                     </button>
-                    <button className={styles.btnNewAdd}>+ выложить объявление</button>
+                    <Link to={'/createad'} className={styles.btnNewAdd}>
+                        + выложить объявление
+                    </Link>
                 </div>
             )}
         </header>

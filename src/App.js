@@ -11,6 +11,7 @@ import { Login } from './components/Login';
 import { Registration } from './pages/Registration';
 import { AccountPage } from './pages/AccountPage';
 import { setAdsItems } from './redux/slices/NewAddsSlice';
+import { CreateAd } from './pages/CreateAd';
 
 function App() {
     const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/" element={<Main />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/user/setting" element={<AccountPage />} />
+                <Route path="/createad" element={<CreateAd />} />
             </Routes>
             {isOpen && !isLogin ? <Login /> : null}
         </div>

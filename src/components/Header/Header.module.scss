@@ -41,6 +41,11 @@
             border-radius: 6px;
             background-color: var(--GN500, #00aa5b);
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 13px;
         }
         .btnLogout {
             height: 20px;

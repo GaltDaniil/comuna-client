@@ -1,0 +1,23 @@
+.container {
+    display: block;
+    padding: 30px;
+    flex-direction: column;
+    color: var(--NN700, #525867);
+    background-color: #ffffff;
+    border: 1px solid #e4ebf5;
+    width: 100%;
+    border-radius: 8px;
+
+    .title {
+        margin-right: 10px;
+        font-size: 16px;
+        width: 300px;
+        font-weight: 400;
+    }
+    .field {
+        width: 100%;
+        border: 1px solid rgb(209, 209, 209);
+        height: 40px;
+        border-radius: 4px;
+    }
+}
