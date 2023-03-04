@@ -20,9 +20,7 @@ function App() {
 
     React.useEffect(() => {
         dispatch(fetchAuthMe());
-        axios
-            .get('https://95.163.242.251:4444/ads')
-            .then((res) => dispatch(setAdsItems(Object.values(res.data))));
+        axios.get('/ads').then((res) => dispatch(setAdsItems(Object.values(res.data))));
     }, []);
 
     return (
