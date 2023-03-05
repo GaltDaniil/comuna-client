@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import { setIsOpenEnter } from '../../redux/slices/EnterSlice';
 import { selectIsLogin } from '../../redux/slices/AuthSlice';
 import { logout } from '../../redux/slices/AuthSlice';
-
-import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -41,7 +39,9 @@ export const Header = () => {
             <p style={{}}>Какой нибудь пиздатый слоган</p>
             {isLogin ? (
                 <div className={styles.btns}>
-                    <button className={styles.btnNewAdd}>+ выложить объявление</button>
+                    <Link to={'/createad'} className={styles.btnNewAdd}>
+                        + выложить объявление
+                    </Link>
                     <Link
                         to={'/user/setting'}
                         style={{
