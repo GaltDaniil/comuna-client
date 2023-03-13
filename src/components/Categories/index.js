@@ -8,10 +8,13 @@ export function Categories() {
     return (
         <div className={styles.container}>
             {categoriesItems.map((el) => {
-                if (el === 'Все категории') {
+                if (el.name === 'Все категории') {
                     return <p></p>;
                 }
-                return <p className={styles.categoriesItem}>{el}</p>;
+                if (el.name === 'Другое') {
+                    return <p></p>;
+                }
+                return <p className={styles.categoriesItem}>{el.name}</p>;
             })}
         </div>
     );

@@ -32,7 +32,6 @@ export const Login = () => {
 
     const onSubmit = async (values) => {
         const data = await dispatch(fetchAuth(values));
-        console.log(data);
 
         if (!data.payload) {
             alert('Не верный логин или пароль');

@@ -29,7 +29,7 @@ export const Header = () => {
                     position: 'relative',
                     fontSize: '38px',
                     fontWeight: '700',
-                    color: 'rgb(0, 207, 38)',
+                    color: '#5e4ef2',
                     textDecoration: 'none',
                     top: '-5px',
                 }}

@@ -47,7 +47,7 @@ export const AccountPage = () => {
                                     Мои объявления
                                 </li>
                                 <li
-                                    className={styles.deactiveTab}
+                                    className={`${styles.deactiveTab} ${styles.disabled}`}
                                     onClick={() => {
                                         setTab(2);
                                     }}
@@ -55,7 +55,7 @@ export const AccountPage = () => {
                                     Мои резюме
                                 </li>
                                 <li
-                                    className={styles.deactiveTab}
+                                    className={`${styles.deactiveTab} ${styles.disabled}`}
                                     onClick={() => {
                                         setTab(3);
                                     }}

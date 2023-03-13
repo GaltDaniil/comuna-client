@@ -1,0 +1,75 @@
+.castoberLable {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0px 8px;
+    height: 56px;
+    list-style: none;
+    &:hover {
+        background: #f8f8f8;
+    }
+
+    .chatImgWraper {
+        position: relative;
+        margin-right: 8px;
+        flex-shrink: 0;
+        height: 26px;
+        img {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+        }
+    }
+
+    .castomerLable {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        overflow: hidden;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 8px 0px;
+
+        p {
+            font-size: 12px;
+            font-weight: normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0px;
+            line-height: 22px;
+            width: 100%;
+            color: var(--N700, rgba(49, 53, 59, 0.96));
+        }
+
+        .statusOnline {
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 18px;
+            border-radius: 3px;
+            padding: 0px 4px;
+            margin: 0px;
+            color: var(--G500, #03ac0e);
+            background: var(--G200, #d6ffde);
+        }
+        .statusOffline {
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 18px;
+            border-radius: 3px;
+            padding: 0px 4px;
+            margin: 0px;
+            background: var(--G500, #d3d3d3);
+            color: var(--G200, #292929);
+        }
+    }
+}
+.added {
+    background: #edecfd;
+    &:hover {
+        background: #edecfd;
+    }
+}

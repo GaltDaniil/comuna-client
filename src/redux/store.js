@@ -1,15 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import NewAddsReducer from './slices/NewAddsSlice';
-import CategoriesReducer from './slices/CategoriesSlice';
+import AdsReducer from './slices/AdsSlice';
+import { getCategories } from './slices/CategoriesSlice';
 import EnterReducer from './slices/EnterSlice';
 import { authReducer } from './slices/AuthSlice';
+import UsersSlice from './slices/UsersSlice';
+import ChatSlice from './slices/ChatSlice';
 
 export const store = configureStore({
     reducer: {
-        newAddItems: NewAddsReducer,
-        categories: CategoriesReducer,
+        adsItems: AdsReducer,
+        categories: getCategories,
         isOpenEnter: EnterReducer,
         auth: authReducer,
+        users: UsersSlice,
+        chats: ChatSlice,
     },
 });

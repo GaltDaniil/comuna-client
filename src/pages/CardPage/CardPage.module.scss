@@ -1,0 +1,140 @@
+.container {
+    display: grid;
+    grid-template-columns: minmax(0px, 348px) minmax(0px, 468px) minmax(0px, 268);
+    grid-template-areas:
+        'product_media ticker_info variant_options'
+        'product_media product_content variant_options'
+        'product_media product_detail variant_options'
+        'product_media obat_keras variant_options'
+        'product_media shop_credibility variant_options'
+        'product_media shipment variant_options'
+        'product_media shipping variant_options'
+        'product_media offerings variant_options'
+        'product_media QRCode variant_options'
+        'product_media report variant_options'
+        'review review variant_options'
+        'tdn_topads tdn_topads variant_options'
+        'discussion_faq discussion_faq variant_options'
+        'pdp_1 pdp_1 pdp_1'
+        'pdp_2 pdp_2 pdp_2'
+        'pdp_3 pdp_3 pdp_3'
+        'pdp_4 pdp_4 pdp_4';
+    column-gap: 52px;
+    .grid1 {
+        grid-area: product_media / product_media / product_media / product_media;
+        margin: 0px;
+
+        .images {
+            top: 60px;
+            position: sticky;
+
+            .imageContainer {
+                display: flex;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                width: 100%;
+                height: 348px;
+                align-items: center;
+                justify-content: center;
+                min-width: 350px;
+
+                .mainImage {
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    padding: 0px;
+                    margin: auto;
+                    border: none;
+                    box-sizing: border-box;
+                }
+            }
+            .miniImages {
+                margin-top: 10px;
+                display: flex;
+                overflow: auto;
+
+                .miniContainer {
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    margin: 4px;
+                    &:hover {
+                        border: 2px solid green;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .cardInfo {
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    pre {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, с 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .infoContainer {
+        top: 60px;
+        position: sticky;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: 1px solid rgb(228, 228, 228);
+        border-radius: 15px;
+
+        .miniAvatar {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .telegramBtn {
+            height: 50px;
+            color: white;
+            background: #229ed9;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .chatBtn {
+            height: 50px;
+            color: white;
+            background: #00aa5b;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}

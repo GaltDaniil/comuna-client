@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { Search } from '../../components/Search';
 import { Categories } from '../../components/Categories';
-import { NewAdds } from '../../components/NewAdds';
+import { NewAds } from '../../components/NewAds';
 
 export const Main = () => {
     return (
@@ -14,8 +14,8 @@ export const Main = () => {
             <Search />
             <Categories />
             <Routes>
-                <Route path="/" element={<NewAdds />} />
-                <Route path="/categorie1" element={<NewAdds />} />
+                <Route path="/" element={<NewAds />} />
+                <Route path="/categorie1" element={<NewAds />} />
             </Routes>
         </div>
     );

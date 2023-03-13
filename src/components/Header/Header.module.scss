@@ -1,6 +1,7 @@
 .container {
     padding: 0px 15px;
-    position: relative;
+    position: sticky;
+    top: 0px;
 
     height: 58px;
     display: flex;
@@ -9,7 +10,7 @@
     background: #ffffff;
     h2 {
         font-size: 24px;
-        color: rgb(0, 207, 38);
+        color: #5e4ef2;
         text-decoration: none;
     }
     p {
@@ -28,10 +29,10 @@
         .btnEnter {
             width: 180px;
             height: 35px;
-            border: 2px solid #22aaff;
+            border: 2px solid #5e4ef2;
             border-radius: 6px;
             background: none;
-            color: #22aaff;
+            color: #5e4ef2;
         }
 
         .btnNewAdd {
@@ -39,7 +40,7 @@
             height: 35px;
             border: none;
             border-radius: 6px;
-            background-color: var(--GN500, #00aa5b);
+            background-color: var(--GN500, #5e4ef2);
             color: white;
             display: flex;
             align-items: center;

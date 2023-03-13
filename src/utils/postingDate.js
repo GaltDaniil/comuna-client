@@ -1,4 +1,4 @@
-export const whebItWasPosting = (time) => {
+export const postingDate = (time) => {
     const dateNow = new Date();
     const dateAds = new Date(time);
     const howHours = 1000 * 60 * 60;

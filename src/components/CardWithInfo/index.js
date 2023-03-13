@@ -3,7 +3,8 @@ import styles from './CardWithInfo.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
-import { whebItWasPosting } from '../../utils/dateConstructor';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { postingDate } from '../../utils/postingDate';
 
 export const CardWithInfo = ({
     id,
@@ -14,7 +15,21 @@ export const CardWithInfo = ({
     createdAt,
     viewsCount,
     likeStatus,
+    status,
+    favoriteCount,
 }) => {
+    const statusRender = () => {
+        if (status === 0) {
+            return <p style={{ color: 'orange' }}> На проверке</p>;
+        } else if (status === 1) {
+            return <p style={{ color: 'green' }}>Опубликовано</p>;
+        } else if (status === 2) {
+            <p>В архиве</p>;
+        } else {
+            <p style={{ color: 'red' }}>Отклонено</p>;
+        }
+    };
+
     return (
         <div className={styles.cardContainer}>
             <div className={styles.cardImgContainer}>
@@ -23,15 +38,33 @@ export const CardWithInfo = ({
             <div className={styles.cardInfo}>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <span>{price}</span>
+                <p>{price}</p>
             </div>
 
             <div className={styles.cardBtns}>
-                <p>{whebItWasPosting(createdAt)}</p>
+                <div style={{ display: 'flex' }}>
+                    <span>Статус</span>
 
-                <span>{viewsCount}</span>
-                <FontAwesomeIcon className={styles.cardView} icon={faEye} />
-                <FontAwesomeIcon className={styles.cardLike} icon={faHeart} />
+                    <p>{statusRender()}</p>
+                </div>
+                <div style={{ display: 'flex' }}>
+                    <span>Дата создания</span>
+                    <p>{postingDate(createdAt)}</p>
+                </div>
+                <div style={{ display: 'flex' }}>
+                    <span>Просмотров</span>
+                    <FontAwesomeIcon className={styles.cardView} icon={faEye} />
+                    <p>{viewsCount}</p>
+                </div>
+                <div style={{ display: 'flex' }}>
+                    <span>В избранных у</span>
+                    <FontAwesomeIcon className={styles.cardLike} icon={faHeart} />
+                    <p>{favoriteCount}</p>
+                </div>
+                <div style={{ display: 'flex', marginTop: '20px', alignItems: 'center' }}>
+                    <button className={styles.cardEdit}>Редактировать</button>
+                    <FontAwesomeIcon className={styles.cardDelete} icon={faTrash} />
+                </div>
             </div>
         </div>
     );

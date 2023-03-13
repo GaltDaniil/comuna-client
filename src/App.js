@@ -5,13 +5,16 @@ import axios from './axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAuthMe } from './redux/slices/AuthSlice';
 import { selectIsLogin } from './redux/slices/AuthSlice';
+import { fetchAllAds } from './redux/slices/AdsSlice';
 
 import { Main } from './pages/Main';
 import { Login } from './components/Login';
 import { Registration } from './pages/Registration';
 import { AccountPage } from './pages/AccountPage';
-import { setAdsItems } from './redux/slices/NewAddsSlice';
+import { setAdsItems } from './redux/slices/AdsSlice';
 import { CreateAd } from './pages/CreateAd';
+import { AdminPanel } from './pages/AdminPanel';
+import { CardPage } from './pages/CardPage';
 
 function App() {
     const dispatch = useDispatch();
@@ -21,7 +24,7 @@ function App() {
 
     React.useEffect(() => {
         dispatch(fetchAuthMe());
-        axios.get('/ads').then((res) => dispatch(setAdsItems(Object.values(res.data))));
+        dispatch(fetchAllAds());
     }, []);
 
     return (
@@ -31,6 +34,8 @@ function App() {
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/user/setting" element={<AccountPage />} />
                 <Route path="/createad" element={<CreateAd />} />
+                <Route path="/admin" element={<AdminPanel />} />
+                <Route path="/ad/:id" element={<CardPage />} />
             </Routes>
             {isOpen && !isLogin ? <Login /> : null}
         </div>

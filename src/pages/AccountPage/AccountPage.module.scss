@@ -33,11 +33,14 @@
             border-top-right-radius: 8px;
 
             .activeTab {
-                border-bottom: 2px solid rgb(0, 207, 38);
-                color: rgb(0, 207, 38);
+                border-bottom: 2px solid #9388f1;
+                color: #877cee;
             }
             .deactiveTab {
                 color: rgb(205, 205, 205);
+            }
+            .disabled {
+                pointer-events: none;
             }
 
             li {
@@ -91,7 +94,7 @@
             width: 135px;
             height: 2px;
             border-radius: 1px;
-            background-color: var(--GN500, #00aa5b);
+            background-color: var(--GN500, #8c81ec);
             position: absolute;
             bottom: 0px;
             left: 160px;

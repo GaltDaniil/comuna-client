@@ -1,0 +1,24 @@
+.adsItems {
+    display: flex;
+}
+.ad {
+    position: relative;
+}
+.moderBtn {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(81, 194, 81);
+    transition: 0.1s ease-in;
+    &:hover {
+        transition: 0.1s ease-in;
+        background: rgb(122, 228, 122);
+    }
+}

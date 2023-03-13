@@ -1,0 +1,66 @@
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    .popContent {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        height: 600px;
+        flex-direction: column;
+        padding: 50px 35px;
+        background: rgb(255, 255, 255);
+        border-radius: 20px;
+
+        p {
+            font-size: 14px;
+            opacity: 0.5;
+            margin-top: 20px;
+        }
+
+        .imgBlock {
+            display: flex;
+            width: 100%;
+            img {
+                width: 130px;
+                margin-right: 10px;
+            }
+            .infoBlock {
+                width: 100%;
+            }
+        }
+    }
+    .btnClose {
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.2;
+        transition: opacity 0.2s ease-in-out;
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+    .radioDecline {
+        position: absolute;
+        padding: 20px;
+        box-shadow: 0 0 10px 4px rgb(238, 238, 238);
+        border-radius: 10px;
+        border: 1px solid rgb(212, 212, 212);
+        width: 250px;
+        left: 110px;
+        top: -150px;
+        transition: 0.2s ease-in;
+    }
+}

@@ -4,7 +4,6 @@ import axios from '../../axios';
 export const fetchAuth = createAsyncThunk('auth/fetchAuth', async (params) => {
     try {
         const { data } = await axios.post('/auth/login', params);
-
         return data;
     } catch (error) {
         console.log(error);
@@ -30,7 +29,7 @@ export const fetchRegister = createAsyncThunk('auth/fetchRegister', async (param
 });
 
 const initialState = {
-    data: null,
+    data: [],
     status: 'loading',
 };
 const authSlice = createSlice({
