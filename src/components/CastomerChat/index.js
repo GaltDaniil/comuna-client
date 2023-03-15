@@ -10,28 +10,31 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export const CastomerChat = () => {
     const dispatch = useDispatch();
+    console.log('123');
+
+    React.useEffect(() => {
+        console.log('запуск эффекта');
+        const fn = async () => {
+            dispatch(fetchMyChats({ chatId: userData.chats }));
+        };
+        fn();
+    }, []);
 
     const userData = useSelector((state) => state.auth.data);
     console.log(userData);
     const userChats = useSelector((state) => state.chats.data);
     const status = useSelector((state) => state.chats.status);
     console.log(userChats);
+    console.log(status);
 
     const [textMessage, setTextMessage] = React.useState('');
-    const [activeUser, setActiveUser] = React.useState({
+    const [activeSeller, setActiveUser] = React.useState({
         index: 0,
         _id: 0,
         sellerId: 0,
         fullName: '',
         avatarUrl: '',
     });
-
-    React.useEffect(() => {
-        const getMyChats = async () => {
-            await dispatch(fetchMyChats({ chatId: userData.chats }));
-        };
-        getMyChats();
-    }, []);
 
     const ChangeChatUser = (id) => {
         setActiveUser(id);
@@ -54,7 +57,7 @@ export const CastomerChat = () => {
                                 userId={userData._id}
                                 key={index}
                                 ChangeChatUser={ChangeChatUser}
-                                activeUser={activeUser}
+                                activeUser={activeSeller}
                             />
                         ))}
                     </ul>
@@ -64,9 +67,9 @@ export const CastomerChat = () => {
                 <div className={styles.chatHeader}>
                     <div className={styles.activeUser}>
                         <div style={{ display: 'flex' }}>
-                            <img src={`/img/${activeUser.avatarUrl}`} alt="userAvatar" />
+                            <img src={`/img/${activeSeller.avatarUrl}`} alt="userAvatar" />
                             <div style={{ marginLeft: '10px' }}>
-                                <p>{activeUser.fullName}</p>
+                                <p>{activeSeller.fullName}</p>
                                 {/* <span>
                                     {fishSeller[activeUser.index].status === true
                                         ? 'Online'
@@ -86,7 +89,7 @@ export const CastomerChat = () => {
                 <div className={styles.chatPlace}>
                     <div className={styles.messages}>
                         {status === 'loaded' ? (
-                            <CastomerChatMessages userChats={userChats} _id={activeUser._id} />
+                            <CastomerChatMessages userChats={userChats} _id={activeSeller._id} />
                         ) : null}
                     </div>
                     <div className={styles.inputField}>

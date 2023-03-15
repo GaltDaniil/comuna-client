@@ -14,11 +14,10 @@ export const CastomerChatLable = ({ _id, usersId, userId, ChangeChatUser, index,
     React.useEffect(() => {
         const fn = async () => {
             const seller = await dispatch(fetchSeller({ userId }));
-            console.log(seller);
             setIsSeller(seller.payload);
         };
         fn();
-        if (index === 0) {
+        /* if (index === 0) {
             console.log('Установка параметров');
             ChangeChatUser({
                 index,
@@ -27,10 +26,9 @@ export const CastomerChatLable = ({ _id, usersId, userId, ChangeChatUser, index,
                 fullName: seller.fullName,
                 avatarUrl: seller.avatarUrl,
             });
-        }
+        } */
     }, []);
 
-    console.log(seller);
     return (
         <li
             onClick={() =>

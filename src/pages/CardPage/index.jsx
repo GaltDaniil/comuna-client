@@ -18,7 +18,7 @@ export const CardPage = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
 
-    const { thisAd, status } = useSelector((state) => state.adsItems);
+    const { thisAd, oneAdStatus } = useSelector((state) => state.adsItems);
     const userData = useSelector((state) => state.auth.data);
     const sellerStatus = useSelector((state) => state.users.status);
     const isLogin = useSelector(selectIsLogin);
@@ -26,10 +26,9 @@ export const CardPage = () => {
     const [isMainImage, setIsMainImage] = React.useState(0);
     const [seller, setIsSeller] = React.useState([]);
 
-    const isChatOpen = useSelector((state) => state.chats.isOpen);
-
     React.useEffect(() => {
         const fn = async () => {
+            console.log('начало прогрузки');
             const data = await dispatch(fetchOneAd({ id }));
             const userId = data.payload.userId;
 
@@ -69,7 +68,7 @@ export const CardPage = () => {
                 <div className={styles.grid1}>
                     <div className={styles.images}>
                         <div className={styles.imageContainer}>
-                            {status === 'loaded' ? (
+                            {oneAdStatus === 'loaded' ? (
                                 <img
                                     src={`/img/${thisAd.imagesUrl[isMainImage]}`}
                                     className={styles.mainImage}
@@ -78,7 +77,7 @@ export const CardPage = () => {
                             ) : null}
                         </div>
                         <div className={styles.miniImages}>
-                            {status === 'loaded'
+                            {oneAdStatus === 'loaded'
                                 ? thisAd.imagesUrl.map((el, index) => (
                                       <div
                                           key={index}
@@ -123,7 +122,6 @@ export const CardPage = () => {
                         </div>
                     </div>
                 </div>
-                {isChatOpen ? <CastomerChat /> : null}
             </div>
         </>
     );

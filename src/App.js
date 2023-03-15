@@ -5,7 +5,6 @@ import axios from './axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAuthMe } from './redux/slices/AuthSlice';
 import { selectIsLogin } from './redux/slices/AuthSlice';
-import { fetchAllAds } from './redux/slices/AdsSlice';
 
 import { Main } from './pages/Main';
 import { Login } from './components/Login';
@@ -15,16 +14,18 @@ import { setAdsItems } from './redux/slices/AdsSlice';
 import { CreateAd } from './pages/CreateAd';
 import { AdminPanel } from './pages/AdminPanel';
 import { CardPage } from './pages/CardPage';
+import { CastomerChat } from './components/CastomerChat';
 
 function App() {
     const dispatch = useDispatch();
 
+    const isChatOpen = useSelector((state) => state.chats.isOpen);
     const isOpen = useSelector((state) => state.isOpenEnter.value);
     const isLogin = useSelector(selectIsLogin);
 
     React.useEffect(() => {
         dispatch(fetchAuthMe());
-        dispatch(fetchAllAds());
+        console.log('Загрузка данных юзера с App');
     }, []);
 
     return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/ad/:id" element={<CardPage />} />
             </Routes>
             {isOpen && !isLogin ? <Login /> : null}
+            {isChatOpen ? <CastomerChat /> : null}
         </div>
     );
 }

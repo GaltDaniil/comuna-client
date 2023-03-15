@@ -5,9 +5,6 @@ import { Header } from '../../components/Header';
 import { Search } from '../../components/Search';
 import { UserInfo } from './AccountComp/UserInfo';
 import { UserAds } from './AccountComp/UserAds';
-import { Categories } from '../../components/Categories';
-
-import { Tabs, Tab, Box } from '@mui/material';
 
 export const AccountPage = () => {
     const [activeTab, setTab] = React.useState(0);

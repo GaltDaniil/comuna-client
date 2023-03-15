@@ -61,7 +61,6 @@ export const ChatSlice = createSlice({
         // Загрузка всех чатов
         [fetchMyChats.pending]: (state) => {
             state.status = 'loading';
-            state.data = [];
         },
         [fetchMyChats.fulfilled]: (state, action) => {
             state.status = 'loaded';

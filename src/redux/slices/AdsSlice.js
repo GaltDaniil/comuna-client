@@ -46,6 +46,7 @@ const initialState = {
     status: 'loading',
     userAds: [],
     thisAd: {},
+    oneAdStatus: 'loading',
 };
 
 export const AdsSlice = createSlice({
@@ -86,15 +87,15 @@ export const AdsSlice = createSlice({
 
         // Конкретное объявление
         [fetchOneAd.pending]: (state) => {
-            state.status = 'loading';
+            state.oneAdStatus = 'loading';
             state.thisAd = {};
         },
         [fetchOneAd.fulfilled]: (state, action) => {
-            state.status = 'loaded';
+            state.oneAdStatus = 'loaded';
             state.thisAd = action.payload;
         },
         [fetchOneAd.rejected]: (state) => {
-            state.status = 'error';
+            state.oneAdStatus = 'error';
             state.thisAd = {};
         },
     },
